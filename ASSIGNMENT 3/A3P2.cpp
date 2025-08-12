@@ -27,21 +27,21 @@ public:
         cin >> real >> imag;
     }
 
-    Complex add(const Complex &t) {
+    Complex add(Complex t) {
         return Complex(real + t.real, imag + t.imag);
     }
 
-    Complex subtract(const Complex &t) {
+    Complex subtract(Complex t) {
         return Complex(real - t.real, imag - t.imag);
     }
 
-    Complex multiply(const Complex &t) {
+    Complex multiply(Complex t) {
         double r = (real * t.real) - (imag * t.imag);
         double i = (real * t.imag) + (imag * t.real);
         return Complex(r, i);
     }
 
-    Complex divide(const Complex &t) {
+    Complex divide(Complex t) {
         double denominator = (t.real * t.real) + (t.imag * t.imag);
         if (denominator == 0) {
             cout << "Error: Division by zero!" << endl;
